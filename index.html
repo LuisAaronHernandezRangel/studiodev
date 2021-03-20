@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Studio Dev</title><!--aqui se pone todo lo que no es visible en la pag-->
+		<meta charset="utf-8"> <!-- para arreglar lo de los acentos-->
+		<link rel="preconnect" href="https://fonts.gstatic.com"><!--para usar google fonts-->
+		<script src="https://kit.fontawesome.com/aad93cb190.js" crossorigin="anonymous"></script><!--para usar caracteres como si fueran fuentes use awesome fonts-->
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+
+	<body>
+		<div class="home-wrapper"><!--para envolverlos en un fondo -->
+
+			<header ><!--aqui estaba la clase container pero por position fixed que me
+				movio los menus de nav, tuve que hacer un div y ponerle clase container para que mi
+				menu nav se quedara en la esquina superior derecha-->
+				<div class="container">
+					<img src="images/logo.png" alt="Logo Studio Dev"><!--para el SEO y sepa lo que hay adentro de la imagen-->
+					<nav>
+						<a href="#home" class="active">HOME</a>
+						<a href="#servicios">SERVICIOS</a>
+						<a href="#portafolio">PORTAFOLIO</a>
+						<a href="#contacto">CONTACTO</a>
+					</nav>					
+				</div>
+			</header>
+
+			<section id="home" class="container">
+				<h1>CREAMOS LAS <strong>APLICACIONES</strong> DEL FUTURO</h1>
+				<div class="divider"></div>
+				<p>Dev studio es la mejor opción si necesutas un prototipo de desarrollo</p>
+
+				<div class="social">
+					<a href=""><i class="fab fa-facebook"></i></a>´<!--así se usa la fuente awesome-->
+					<a href=""><i class="fab fa-twitter-square"></i></a>
+					<a href=""><i class="fab fa-github"></i></a>
+				</div>
+			</section>				
+
+		</div>
+		
+
+		<section id="servicios" class="container"><!--clase container pa que no use toda la pantalla-->
+			<h2>Servicios</h2>
+			<div class="box">
+				<img src="images/web-design.png" alt="Web Design">
+				<h3>Web Design</h3>
+				<p>Somos expertos en web design. Nuetro equipo es el mejor</p>
+			</div>
+			<div class="box">
+				<img src="images/web-development.png" alt="Web Development">
+				<h3>Web Development</h3>
+				<p>Somos expertos en web development. Nuetro equipo es el mejor</p>
+			</div>
+			<div class="box">
+				<img src="images/ux-ui.png" alt="UX and UI">
+				<h3>Mobile Development</h3>
+				<p>Somos expertos en Mobile development. Nuetro equipo es el mejor</p>
+			</div>						
+		</section>
+
+		<section id="video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/xo9RCf4XZyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</section>
+
+		<section id="portafolio" class="container">
+			<h2>PORTAFOLIO</h2>
+			<div class="box">
+				<img src="images/portafolio/roundicons.png" alt="íconos redondeados">
+				<h3>íconos redondeados</h3>
+				<p>creamos los mejores íconos redondeados</p>
+			</div>
+			<div class="box">
+				<img src="images/portafolio/treehouse.png" alt="íconos redondeados">
+				<h3>Creative digital</h3>
+				<p>creamos los mejores íconos redondeados</p>
+			</div>
+			<div class="box">
+				<img src="images/portafolio/escape.png" alt="íconos redondeados">
+				<h3>We can do that</h3>
+				<p>creamos los mejores íconos redondeados</p>
+			</div>
+			<div class="box">
+				<img src="images/portafolio/escape.png" alt="íconos redondeados">
+				<h3>Escape</h3>
+				<p>creamos los mejores íconos redondeados</p>
+			</div>
+			<div class="box">
+				<img src="images/portafolio/dreams.png" alt="íconos redondeados">
+				<h3>Dreams</h3>
+				<p>creamos los mejores íconos redondeados</p>
+			</div>
+			<div class="box">
+				<img src="images/portafolio/startup-framework.png" alt="íconos redondeados">
+				<h3>Startup Framework</h3>
+				<p>creamos los mejores íconos redondeados</p>
+			</div>															
+		</section>
+
+		<section id="contacto"><!-- estos id sirven tambien para usarlos en href para el menu de arriba -->
+			<h2>CONTACTO</h2>
+			<form>
+				<div><input type="text" placeholder="escribe tu email"></div><!--con el div le quito lo inline al elemento-->
+				<div><textarea rows="10" placeholder="tu mensaje"></textarea></div>
+				<button>ENVIAR</button>
+			</form>
+		</section>
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6615661264254!2d-99.19936398578238!3d19.383801447263746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201d336c216e9%3A0x77a819ad724670bc!2sNellie%20Campobello%20129%2C%20Carola%2C%20San%20Pedro%20de%20los%20Pinos%2C%2001180%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1sen!2smx!4v1616217046341!5m2!1sen!2smx" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+		<footer>
+			c 2015 <strong>Studio Dev</strong>, Todos los Derechos son Reservados
+		</footer>
+
+
+	</body>
+
+</html>

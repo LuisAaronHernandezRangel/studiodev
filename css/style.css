@@ -1,0 +1,205 @@
+*{
+	box-sizing: border-box;/*lo que hace es que me respete el ancho y que valga madres
+	los paddings en caso de que los items no quepan en modo inline, es decir el width absorvera
+	el espaciado de padding o margin*/
+}
+
+body{/*con font yo puedo seleccionar cualquier fuente que tenga instala en mi pc, si no la encuentra
+	me elije una o puedo poner varias para que el navegador vaya probando con fuentes*/
+	/*pero puedo usar google fonts*/
+	font-family: 'Roboto', sans-serif;/*esa codigo te lo da google fonts*/
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.home-wrapper{
+	background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url('../images/background.jpg') no-repeat center top;/*ojo 
+	con la coma que va en medio xq todo se vuelve blanco, esto sirve para hacer la imágen más obscura*/
+	background-size: cover;
+	color: white;
+}
+
+header{
+	position: fixed;/*para que el encabezado se fije conforme desplazo, pero esto hace que el menu se recorra
+	a la izquierda y ya no en la esquina derecha modificare html*/
+	padding: 10px 0px 10px 0px;/*igual podría solo poner 10px para arriba y abajo y 0 para izquierda y derecha
+	padding:10px 0;*/
+	width: 100%;
+	background-color: rgba(48,48,48,0.5);
+
+}
+
+header img{
+	width: 200px; /*ajusta el tamaño del logo*/
+}
+
+header nav{
+	float:right; /*me mueve todo a la derecha pero en el mismo reglon que la imagen o logo,
+	hace que despues de estar debajo el elemento se mueva al mismo renglon y ocupar el mismo espacio
+	objetos absolutos no respetan el float, use esta propiedad porque si trabajaba con 
+	las propiedades de las cajas todos loselementos se pondrían en una misma ilera
+	y solo me interesaba el icono y los navs */
+	margin-top: 10px;/*agrega 10 extras más des los que ya tenía*/
+}
+
+header nav a{/*afecta individualmente a cada link osea como HOME y así, cada elemento le daría un espacio*/
+	color:white;
+	font-weight: bold;
+	text-decoration: none;/*para que me quite el subrayado*/
+	margin-left: 10px;
+	padding: 10px 15px;/*10 para arriba y abajo, 15 izquierda y derecha*/
+}
+
+header nav a.active{ /*solo modifico el home*/
+	background-color: #fed136;
+	border-radius: 3px;
+}
+
+#home {
+	text-align: center;
+	padding: 200px 0px 150px 0px /*si yo metiera más pading el elemento o bloque crecería en automático
+	pues no he restringido el tamaño del contenedor, lo puedo ir haciendo tan grande como yo quiera
+	esta sección con id home*/
+}
+
+#home h1{
+	font-size: 68px;
+	font-weight:normal;
+	line-height: 1.2;/*para sobrescribir propiedad de body*/
+	margin-bottom: 40px;
+}
+
+#home.divider{
+	width: 80px;
+	border-top: 5px solid #fed136;
+	margin: 0 auto; /*lo centra*/
+}
+
+#home p{
+	font-size: 24px;
+	margin-top: 40px;/*para que se vea centrado entre p y h1*/
+}
+
+#home .social{
+	margin-top: 80px;
+}
+
+#home .social a{
+	color: white;
+	display: inline-block;
+	border-radius: 100%; /**ojo con esto estoy modificando el contenedor mas no el iconito*/
+	background-color: black;/*si uso blanco ya hago el elemento circular*/
+	font-size: 25px;
+	font-weight: bold;
+	height: 50px; /*con esto medifico el contenedor negro no el iconito pero si uso balnco, con eso 
+	arreglo el pedo de tener un circulo negro de fondo*/
+	width: 50px;
+	line-height: 50px;/*salt de linea*/
+	margin-right: 10px;
+	/* si quisiera dar efecto de transicion pero ya no me jalaron
+	-webkit-transition:all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;*/
+
+}
+
+#home .social a:hover {
+	background-color: #fed136;
+}
+
+#servicios .box{/*todo queda como centradito y aunque son 3 imagenes de 33% no cubre toda la pantalla
+	porque servicios o el box está dentro de una clase container que recorta la pantalla*/
+	display: inline-block;
+	text-align: center;
+	width: 33%;/*al ser 3 imagenes estaría llegando al 99% de la pantalla o width del containes*/
+	padding:10px; /*como me salgo del rango de pantalla no quedarían las 3 en la misma linea
+	pues tengo que configurar una condicion donde si me acabo la pantalla los haga caber si o
+	si. pondré esa condicion con el selector**/
+}
+
+#video{
+	background-color: black;
+	text-align: center;
+	padding: 30px 0;
+}
+
+#portafolio .box{/*RESUMEN:LA CLASE PADRE O CONTENEDOR PADRE SOBRESCRIBE LAS PROPIEDADES
+    DE LAS CLASES EN HIJOS DEL CONTENEDOR en este caso si yo creara propiedades para id portafolio
+    y le asigno la clase container a un div hijo, primero aplica propiedades del hijo y el padre sobrescribe
+    las propiedades del hijo siendo padre la configuracion final ;
+	si yo le asigno container directo a portafolio no podría usar un fondo distinto al blanco
+	si quisiera cambiar el fondo crearía un div interno que fuera la nueva seccion por así decirlo
+	es decir que abarque todos los elementos internos de tal forma que dentro de portafolio
+	habrá un div y ese div obtendrá las propiedades de container pero al estar adentro de una clase 
+	padre como sería portafolio entonces se respeta el colo negro eso es lo que me parece*/
+	display: inline-block;
+	text-align: center;
+	width: 27%;
+	margin: 1%;/*hice esto porque las imagenes valían 33% y por lo tanto no había espaciado*/
+	background-color: grey;
+}
+
+#portafolio .box img{
+	width: 100% /*que paa que no se desborden imagenes creo que para que no aumenten de tamaño
+	exageradamente*/
+}
+
+#portafolio .box p{
+	color:white;
+	
+}
+
+#contacto{
+	background-color: #303030;
+	background-image: url('../images/map-image.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+#contacto h2{
+	color:white;
+}
+#contacto input{
+	padding: 20px;
+	width: 400px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+#contacto textarea {
+	margin:20px 0;
+	padding: 20px; /*aunque tambien se ve afectado por la propiedad de * */
+	width: 400px;
+}
+
+#contacto button{
+	background-color: #fed136;
+	padding: 20px 40px;
+	border-color: #fed136;
+	border-radius: 3px;
+	color: white;
+	font-size: 18px;
+	line-height: 1;
+	font-weight: bold;
+}
+
+footer{
+	padding: 90px 0;
+	text-align: center;
+	font-size: 18px;
+}
+
+section{
+	padding: 80px 0;
+}
+
+section h2{
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 80px;
+}
+.container{ /*para centrar lo que hay en un contenedor*/
+	width: 992px;
+	margin-left: auto;
+	margin-right: auto;
+}
